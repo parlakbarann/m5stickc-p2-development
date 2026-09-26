@@ -4,6 +4,18 @@ Firmware for high-tech pranks and digital self-defense on M5Stack ESP32 Devices
 ![M5-Nemo Matrix Logo](https://github.com/n0xa/m5stick-nemo/blob/main/NEMOMatrix.png)
 Logo by @unagironin
 
+## Bu Fork Hakkında
+
+Bu depo, orijinal [n0xa/m5stick-nemo](https://github.com/n0xa/m5stick-nemo) projesinin bir forku. M5Stick-C-Plus2 ve Türkçe için yaptığım değişiklikler:
+
+* Türkçe dil desteği (`LANGUAGE_TR_TR`) — menüler ve portal ekranı Türkçeleştirildi.
+* WiFi Spam'e "Şarkı Sözü Spam" modu eklendi (Türkçe şarkı sözlerini SSID olarak yayınlıyor) ve Random SSID modu tek seferde 10 isim yayınlayacak şekilde güçlendirildi.
+* BLE Spam (AirPods/SourApple) düzeltildi: BLE Hunter'ı çalıştırdıktan sonra Bluetooth spam'i sessizce bozan `BLEDevice::deinit()` çağrısı kaldırıldı; iOS'un tekrarlayan popup'ları bastırmasını aşmak için AirPods/Beats model havuzu eklendi.
+* EEPROM'dan PineAP Hunter alarm SSID sayısının açılışta yanlış okunması ve WiFi tarama sonuçlarında yanlış BSSID gösterilmesi düzeltildi.
+* STICK_C_PLUS2 için açılış melodisi kapatıldı (ekranın geç açılmasına sebep oluyordu) ve açılış animasyonu, ESP32'de IRAM taşmasına yol açabilen `textWidth()` yerine manuel piksel hesabıyla yeniden yazıldı.
+
+Bu değişiklikler kişisel kullanım/deney amaçlıdır. Orijinal projenin lisansı (GPL-2/3) ve yazarı korunmuştur.
+
 ## Okay so maybe we're back...
 
 ## Name and Background
